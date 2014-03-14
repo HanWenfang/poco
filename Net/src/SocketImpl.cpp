@@ -324,7 +324,7 @@ int SocketImpl::receiveBytes(void* buffer, int length, int flags)
 		if (err == POCO_EAGAIN && !_blocking)
 			;
 		else if (err == POCO_EAGAIN || err == POCO_ETIMEDOUT)
-			throw TimeoutException();
+			throw TimeoutException(err);
 		else
 			error(err);
 	}
@@ -380,7 +380,7 @@ int SocketImpl::receiveFrom(void* buffer, int length, SocketAddress& address, in
 		if (err == POCO_EAGAIN && !_blocking)
 			;
 		else if (err == POCO_EAGAIN || err == POCO_ETIMEDOUT)
-			throw TimeoutException();
+			throw TimeoutException(err);
 		else
 			error(err);
 	}
@@ -1081,6 +1081,8 @@ void SocketImpl::error(int code, const std::string& arg)
 #if defined(POCO_OS_FAMILY_UNIX)
 	case EPIPE:
 		throw IOException("Broken pipe", code);
+	case EBADF:
+		throw IOException("Bad socket descriptor", code);
 #endif
 	default:
 		throw IOException(NumberFormatter::format(code), arg, code);

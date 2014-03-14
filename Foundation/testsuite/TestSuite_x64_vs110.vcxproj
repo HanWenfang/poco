@@ -326,6 +326,7 @@
     <ClCompile Include="src\NumberFormatterTest.cpp" />
     <ClCompile Include="src\NumberParserTest.cpp" />
     <ClCompile Include="src\ObjectPoolTest.cpp" />
+    <ClCompile Include="src\PBKDF2EngineTest.cpp" />
     <ClCompile Include="src\RegularExpressionTest.cpp" />
     <ClCompile Include="src\SharedPtrTest.cpp" />
     <ClCompile Include="src\StringTest.cpp" />
@@ -393,6 +394,7 @@
     <ClCompile Include="src\UUIDGeneratorTest.cpp" />
     <ClCompile Include="src\UUIDTest.cpp" />
     <ClCompile Include="src\UUIDTestSuite.cpp" />
+    <ClCompile Include="src\ClockTest.cpp" />
     <ClCompile Include="src\DateTimeFormatterTest.cpp" />
     <ClCompile Include="src\DateTimeParserTest.cpp" />
     <ClCompile Include="src\DateTimeTest.cpp" />
@@ -463,6 +465,7 @@
     <ClInclude Include="src\NumberFormatterTest.h" />
     <ClInclude Include="src\NumberParserTest.h" />
     <ClInclude Include="src\ObjectPoolTest.h" />
+    <ClInclude Include="src\PBKDF2EngineTest.h" />
     <ClInclude Include="src\RegularExpressionTest.h" />
     <ClInclude Include="src\SharedPtrTest.h" />
     <ClInclude Include="src\StringTest.h" />
@@ -530,6 +533,7 @@
     <ClInclude Include="src\UUIDGeneratorTest.h" />
     <ClInclude Include="src\UUIDTest.h" />
     <ClInclude Include="src\UUIDTestSuite.h" />
+    <ClInclude Include="src\ClockTest.h" />
     <ClInclude Include="src\DateTimeFormatterTest.h" />
     <ClInclude Include="src\DateTimeParserTest.h" />
     <ClInclude Include="src\DateTimeTest.h" />
